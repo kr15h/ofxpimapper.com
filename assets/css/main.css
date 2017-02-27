@@ -1,0 +1,123 @@
+body {
+	color: white;
+	background: #2118D4;
+	font-family: Open Sans, Helvetica;
+	margin: 0;
+	font-size: 18px;
+	padding: 0;
+}
+
+footer {
+	border-top: 1px solid #ffffff;
+	padding-bottom: 20px;
+	margin-top: 40px;
+}
+
+a {
+	color: #aaaaaa;
+	text-decoration: underline;
+}
+
+a:hover{
+	color: #777777;
+	text-decoration: none;
+}
+
+.lead-text {
+	padding-top: 15px;
+}
+
+h1.brand {
+	color: white;
+	font-size: 2em;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+h2 {
+	padding: 8px 15px 8px 15px;
+	background: url(/bg-overlay-pattern.png);
+	color: #2118D4;
+	font-size: 1.6em;
+}
+
+h3 {
+	font-size: 18px;
+	font-weight: bold;
+	padding-top: 15px;
+}
+
+img.logo {
+	background-position: center;
+	width: 300px;
+	height: auto;
+	margin: 0 auto 0 auto;
+}
+
+.logo-github {
+	background-image: url(/github-mark+logo-white-with-bg.svg);
+	background-repeat: no-repeat;
+	height: 46px;
+	width: 148px;
+	/*border: 1px solid red;*/ /*var likt background*/
+	margin: 3px 0px 0px 3px;
+	display: inline-block;
+	vertical-align: top;
+	text-indent: -9876px;
+}
+
+.logo-github:hover {
+	background-image: url(/github-mark+logo-white-bg.svg);
+}
+
+.margin {
+	margin: 50px auto;
+	padding-left: 50px;
+	padding-right: 50px;
+	max-width: 700px;
+}
+
+.aligned {
+	text-align: left;
+	font-size: 0;
+}
+
+.aligned h3 {
+	background: url(/bg-overlay-pattern.png);
+	margin: 3px 0 0 3px;
+	padding: 0;
+	height: 46px;
+	width: 148px;
+	color: #2118D4;
+	display: inline-block;
+	text-align: center;
+	line-height: 46px;
+}
+
+.author {
+	background: url(/bg-overlay-pattern.png);
+	text-align: center;
+	line-height: 46px;
+	height: 46px;
+	width: 46px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #2118D4;
+	margin: 3px 0 0 3px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+@media (max-width: 768px) {
+	img.logo {
+		width: 80%;
+		height: auto;
+	}
+
+	.margin {
+		margin: 15px auto;
+		padding-left: 15px;
+		padding-right: 15px;
+		max-width: 700px;
+	}
+}
