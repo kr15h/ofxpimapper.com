@@ -31,6 +31,11 @@
 
 	<link rel="author" href="/humans.txt">
 	<link rel="stylesheet" type="text/css" media="all" href="/assets/css/main.css">
+
+	<script
+		src="https://code.jquery.com/jquery-1.12.4.min.js"
+		integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+		crossorigin="anonymous"></script>
 </head>
 	
 <body>
@@ -50,26 +55,45 @@
 	
 		<h3>Upcoming Workshops</h3>
 
-		<ul>
-			<li>
-				Projection Mapping with the Raspberry Pi<br>
-				25, 26 Mar / Spektrum Berlin / <a href="https://www.eventbrite.de/e/projection-mapping-with-the-raspberry-pi-advanced-tickets-31260230190">Tickets</a>
-			</li>
-			<li>
-				Projection Mapping with the Raspberry Pi<br>
-				22, 23 Apr / Fab Lab Berlin / <a href="https://www.eventbrite.de/e/projection-mapping-with-the-raspberry-pi-april-tickets-32330025978">Tickets</a>
-			</li>
-			<li>
-				Digital Fabrication for Projection Mapping<br> 
-				29, 30 Apr / Fab Lab Berlin / <a href="https://www.eventbrite.de/e/digital-fabrication-for-projection-mapping-tickets-32464316645">Tickets</a>
-			</li>
-		</ul>
+		<div class="events"></div>
 
 		<footer>
 			<p>© <a href="http://rijnieks.com">Krisjanis Rijnieks</a> 2017</p>
 		</footer>
 
 	</div><!-- /.margin -->
+
+	<script type="text/javascript">
+		var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+		$(document).ready(function(){
+			$.getJSON( "http://ofxpimapper.com/events.php", function( data ) {
+				var items = [];
+				$.each( data.events, function( key, val ) {
+					var item = '';
+					item = '<li>';
+					item += val.name.text;
+					item += '<br>';
+
+					var start = new Date(val.start.local);
+					var end = new Date(val.end.local);
+					item += start.getDate();
+					item += ', ';
+					item += end.getDate();
+					item += ' ' + monthNames[start.getMonth()];
+					item += ' / <a href="' + val.url + '">Tickets</a>';
+
+					item += '</li>';
+
+  					items.push( item );
+				});
+
+				$( "<ul/>", {
+					html: items.join( "" )
+				}).appendTo( ".events" );
+			});
+		});
+	</script>
 
 </body>
 </html>
