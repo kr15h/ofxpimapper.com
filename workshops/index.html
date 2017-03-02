@@ -67,7 +67,7 @@
 		var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 		$(document).ready(function(){
-			$.getJSON( "http://ofxpimapper.com/events.php", function( data ) {
+			$.getJSON( "/eventbrite/events.php", function( data ) {
 				var items = [];
 				$.each( data.events, function( key, val ) {
 					var item = '';
