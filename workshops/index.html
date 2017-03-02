@@ -69,20 +69,20 @@
 		$(document).ready(function(){
 			$.getJSON( "/eventbrite/events.php", function( data ) {
 				var items = [];
-				$.each( data.events, function( key, val ) {
+				$.each( data, function( key, val ) {
 					var item = '';
 					item = '<li>';
-					item += val.name.text;
+					item += val.name;
 					item += '<br>';
 
-					var start = new Date(val.start.local);
-					var end = new Date(val.end.local);
+					var start = new Date(val.start);
+					var end = new Date(val.end);
 					item += start.getDate();
 					item += ', ';
 					item += end.getDate();
 					item += ' ' + monthNames[start.getMonth()];
+					item += ' / ' + val.venue; 
 					item += ' / <a href="' + val.url + '">Tickets</a>';
-
 					item += '</li>';
 
   					items.push( item );
