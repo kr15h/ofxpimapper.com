@@ -1,7 +1,9 @@
 <?php
 
 $token = file_get_contents("./TOKEN");
-if(!$token){
+if($token){
+	$token = trim($token);
+}else{
 	die("token error");
 }
 
