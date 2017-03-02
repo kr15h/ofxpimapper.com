@@ -1,6 +1,10 @@
 <?php
 
 $token = file_get_contents("./TOKEN");
+if(!$token){
+	die("token error");
+}
+
 $url = "https://www.eventbriteapi.com/v3/events/search/?token=".$token."&user.id=186336128901&sort_by=date";
 $data = file_get_contents($url);
 
@@ -31,10 +35,10 @@ if($data){
 		}
 		echo json_encode($events);
 	}else{
-		echo 'json error';
+		die('json error');
 	}
 }else{
-	echo 'data error';
+	die('data error');
 }
 
 ?>
