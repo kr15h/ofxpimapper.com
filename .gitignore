@@ -1,2 +1,4 @@
 .DS_Store
 eventbrite/TOKEN
+eventbrite/TIME
+eventbrite/events.json
