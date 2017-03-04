@@ -1,5 +1,9 @@
 <?php
 
+// Hint: 
+// Make the directory eventbrite/ writeable on the server
+// to get the simple caching thing to work.
+
 define('CACHE_FILE', 'events.json');
 define('TIME_FILE', 'TIME');
 define('TOKEN_FILE', 'TOKEN');
