@@ -1,3 +1,8 @@
+body, html{
+	width: 100%;
+	height: 100%;
+}
+
 body {
 	color: white;
 	background: #2118D4;
@@ -23,15 +28,17 @@ a:hover{
 	text-decoration: none;
 }
 
-.lead-text {
-	padding-top: 15px;
+.hidden {
+	position: absolute;
+	font-size: 0;
+	line-height: 0;
+	letter-spacing: 0;
+	left: -9999px;
+	top: -9999px;
 }
 
-h1.brand {
-	color: white;
-	font-size: 2em;
-	text-align: center;
-	padding-bottom: 20px;
+.lead-text {
+	padding-top: 15px;
 }
 
 h2 {
@@ -47,11 +54,16 @@ h3 {
 	padding-top: 15px;
 }
 
-img.logo {
-	background-position: center;
-	width: 300px;
+.margin {
+	margin: 50px auto;
+	padding-left: 50px;
+	padding-right: 50px;
+	max-width: 700px;
+}
+
+.brand .logo {
+	width: 100%;
 	height: auto;
-	margin: 0 auto 0 auto;
 }
 
 .logo-github {
@@ -68,13 +80,6 @@ img.logo {
 
 .logo-github:hover {
 	background-image: url(/github-mark+logo-white-bg.svg);
-}
-
-.margin {
-	margin: 50px auto;
-	padding-left: 50px;
-	padding-right: 50px;
-	max-width: 700px;
 }
 
 .aligned {
@@ -109,13 +114,8 @@ img.logo {
 }
 
 @media (max-width: 768px) {
-	img.logo {
-		width: 80%;
-		height: auto;
-	}
-
 	.margin {
-		margin: 15px auto;
+		margin: 40px auto;
 		padding-left: 15px;
 		padding-right: 15px;
 		max-width: 700px;
