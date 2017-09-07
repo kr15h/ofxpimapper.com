@@ -6,7 +6,7 @@ body, html{
 body {
 	color: white;
 	background: #2118D4;
-	font-family: Open Sans, Helvetica;
+	font-family: Open Sans, Helvetica, sans-serif;
 	margin: 0;
 	font-size: 18px;
 	padding: 0;
@@ -26,6 +26,40 @@ a {
 a:hover{
 	color: #777777;
 	text-decoration: none;
+}
+
+label{
+	display: block;
+}
+
+input{
+	width: 100%;
+	padding: 0;
+	font-size: 18px;
+	margin: 0;
+	border: none;
+}
+
+input[type="email"]{
+	padding: 10px;
+}
+
+input[type="submit"]{
+	display: block;
+	height: 38px;
+	cursor: pointer;
+	background: url(/assets/images/bg-overlay-pattern.png);
+	color: #2118D4;
+}
+
+.mc-field-group label{
+	padding-bottom: 5px;
+}
+
+.mc-field-group span{
+	display: block;
+	overflow: hidden;
+	padding-bottom: 10px;
 }
 
 .hidden {
@@ -56,8 +90,6 @@ h3 {
 
 .margin {
 	margin: 50px auto;
-	padding-left: 50px;
-	padding-right: 50px;
 	max-width: 700px;
 }
 
