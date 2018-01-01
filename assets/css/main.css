@@ -18,13 +18,15 @@ footer {
 	margin-top: 40px;
 }
 
-a {
-	color: #aaaaaa;
+a,
+a:visited {
+	color: #46b5ff;
 	text-decoration: underline;
 }
 
-a:hover{
-	color: #777777;
+a:hover,
+a:focus {
+	color: #467eff;
 	text-decoration: none;
 }
 
@@ -158,6 +160,47 @@ h3 {
 	margin: 3px 0 0 3px;
 	display: inline-block;
 	vertical-align: top;
+}
+
+.options {
+	margin-top: 25px;
+	margin-bottom: 10px;
+}
+
+.ico {
+	line-height: 1;
+	text-align: center;
+	width: 100%;
+}
+
+.primary.options .ico {
+	font-size: 75px;
+}
+
+.secondary.options .ico {
+	font-size: 50px;
+}
+
+.option {
+	color: #46b5ff;
+	text-decoration: none;
+}
+
+.option .inner {
+	border-left: 2px solid #467eff;
+	padding: 10px;
+	padding-bottom: 15px;
+}
+
+.option h3 {
+	text-align: center;
+	margin: 0;
+}
+
+.option p {
+	font-size: 12px;
+	text-align: center;
+	margin-top: 10px;
 }
 
 @media (max-width: 768px) {
