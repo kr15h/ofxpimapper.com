@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+{{ partial "head.html" . }}
+	
+<body>
+
+<!-- PayPal donate button -->
+<form id="paypal" class="hidden" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="QRE3AT75NE67W">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+<div class="margin">
+
+	<div class="brand">
+		<img 
+			class="logo" 
+			src="/assets/images/ofxpimapper-logo.png?{{ now.Unix }}" 
+			alt="ofxPiMapper">
+	</div>
+
+	<h1 class="hidden">ofxPiMapper</h1>
+
+	<h2>Open source projection mapping tool that runs on the Raspberry Pi</h2>
+
+	<p class="lead-text">{{ .Site.Params.description }}</p>
+
+	<div class="primary options row">
+		<a 
+			href="https://www.dropbox.com/s/khuj0wqnjlsjs07/opm20171016d.img.zip?dl=0" 
+			target="_blank" 
+			class="option col-xs-6">
+			
+			<div class="inner">
+				<div class="ico">
+					<i class="fa fa-hdd-o"></i>
+				</div>
+				<h3>Download Disk Image</h3>
+			</div>
+		</a>
+
+		<a 
+			href="https://github.com/kr15h/ofxPiMapper"
+			target="_blank" 
+			class="option col-xs-6">
+			<div class="inner">
+				<div class="ico">
+					<i class="fa fa-github"></i>
+				</div>
+				<h3>Contribute on GitHub</h3>
+			</div>
+		</a>
+	</div>
+
+	<h2>Support the Development</h2>
+
+	<p class="lead-text">It is free and open source, but the code is still written by humans, it takes time. Web servers and other related services are not for free, computers fail and have to be repaired. Sometimes it is nice to be able to afford to grab a beer. Please consider sharing your wealth if you find this project useful. There are options below.</p>
+
+	<div class="secondary options row">
+		<a
+			href="javascript:alert('Receiving address: 3DtxYLiZdp4DeEWSc3vz19SFeMF6rHo5FB')"
+			class="option col-xs-6 col-sm-4">
+
+			<div class="inner">
+				<div class="ico">
+					<i class="fa fa-btc"></i>
+				</div>
+				<h3>Donate BitCoins</h3>
+				<p>Click to show BitCoin receiving address</p>
+			</div>
+		</a>
+
+		<a 
+			href="http://patreon.com/kriwkrow"
+			target="_blank"
+			class="option col-xs-6 col-sm-4">
+
+			<div class="inner">
+				<div class="ico">
+					<i class="fa fa-handshake-o"></i>
+				</div>
+				<h3>Become a Patreon</h3>
+				<p>Support by setting up a monthly payment</p>
+			</div>
+		</a>
+
+		<a 
+			href="javascript:document.getElementById('paypal').submit()" 
+			class="option col-xs-6 col-sm-4">
+
+			<div class="inner">
+				<div class="ico">
+					<i class="fa fa-paypal"></i>
+				</div>
+				<h3>Donate via PayPal</h3>
+				<p>Donate a fixed amount to support development</p>
+			</div>
+		</a>
+
+	</div>
+
+	<h3>With Pi Mapper you can:</h3>
+
+	<ul>
+		<li>Use the Raspberry Pi or any other computer</li>
+		<li>Map images, videos as well as generative content made in
+		openFrameworks</li>
+		<li>Have a separate media source for every mapping surface</li>
+	</ul>
+
+	<h3>You get:</h3>
+
+	<ul>
+		<li>Ability to use and adjust the ofxPiMapper source code to your
+		needs</li>
+		<li>Possibility to use less expensive embedded platforms</li>
+		<li>Safety as there is a difference between a failing machine in worth
+		of 1500 EUR and 100 EUR</li>
+	</ul>
+
+	<h3>Next:</h3>
+
+	<nav>
+		<ul>
+			<li><a href="https://github.com/kr15h/ofxPiMapper">Browse GitHub repository</a></li>
+			<li><a href="https://aaltodoc.aalto.fi/bitstream/handle/123456789/18589/master_Rijnieks_Krisjanis_2015.pdf">Read thesis</a></li>
+			<li><a href="https://www.dropbox.com/s/khuj0wqnjlsjs07/opm20171016d.img.zip?dl=0">Download latest</a></li>
+		</ul>
+	</nav>
+
+	<h3>Get in touch:</h3>
+	
+	<div id="social_icon_list">
+		<ul>
+			<li><a target="_blank" href="https://t.me/ofxpimapper"><i class="fa fa-telegram"></i></a></li>
+			<li><a target="_blank" href="https://www.facebook.com/ofxpimapper"><i class="fa fa-facebook-official"></i></a></li>
+			<li><a target="_blank" href="https://github.com/kr15h/ofxPiMapper"><i class="fa fa-github"></i></a></li>
+		</ul>
+	</div>
+
+	<h3>Newsletter:</h3>
+
+	<!-- Begin MailChimp Signup Form -->
+	<div id="mc_embed_signup">
+		<form action="//ofxpimapper.us16.list-manage.com/subscribe/post?u=dfa30571b8e1fcdb41dc007f3&amp;id=49b6de4163" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+	    	<div id="mc_embed_signup_scroll">
+				<div class="mc-field-group">
+					<span>
+						<input placeholder="your@email.address" type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+					</span>
+				</div>
+				<div id="mce-responses" class="clear">
+					<div class="response" id="mce-error-response" style="display:none"></div>
+					<div class="response" id="mce-success-response" style="display:none"></div>
+				</div>  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+	    		<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_dfa30571b8e1fcdb41dc007f3_49b6de4163" tabindex="-1" value=""></div>
+	    		<div class="clear">
+	    			<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+	    		</div>
+	    	</div> <!-- #mc_embed_signup_scroll -->
+		</form>
+	</div><!-- #mc_embed_signup -->
+	<!--End mc_embed_signup-->
+
+	{{ partial "footer.html" . }}
+
+</div><!-- /.margin -->
+
+</body>
+</html>

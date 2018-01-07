@@ -1,0 +1,10 @@
+baseURL = "https://ofxpimapper.com/"
+languageCode = "en-us"
+title = "ofxPiMapper"
+
+[params]
+  subtitle = "Open source projection mapping tool that runs on the Raspberry Pi"
+  author = { name = "Krisjanis Rijnieks", url="https://rijnieks.com" }
+  description = "ofxPiMapper is projection mapping software that runs on the Raspberry Pi mini-computer. It comes as an addon for the openFrameworks creative coding toolkit, is open source and available on GitHub."
+  keywords = ["creative coding", "projection mapping", "raspberry pi", "video mapping", "programming", "installations", "multimedia", "interaction", "design", "electronics", "prototyping"]
+  facebook = { app_id = "1902261133343210", type = "product", image = "assets/images/ofxpimapper-ogimage.jpg" }
