@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>{{ .Title }} :: {{ .Site.Title }}</title>
+
+	{{ partial "head/icons.html" . }}
+	{{ partial "head/meta.html" . }}
+	{{ partial "head/css.html" . }}
+
+</head>
+<body>
+
+<div class="margin">
+
+	<h1>{{ .Title }}</h1>
+
+	{{ .Content }}
+
+	{{ partial "footer.html" . }}
+
+</div>
+
+</body>
+</html>

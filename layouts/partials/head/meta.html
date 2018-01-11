@@ -1,0 +1,19 @@
+<meta name="description" content="{{ .Site.Params.description }}">
+<meta name="keywords" content="{{ delimit .Site.Params.keywords ", " }}">
+<meta name="author" content="{{ .Site.Params.author.name }}">
+<link rel="author" href="/humans.txt">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="apple-mobile-web-app-title" content="{{ .Site.Title }}">
+
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="fb:app_id" content="{{ .Site.Params.facebook.app_id }}">
+<meta property="og:url" content="{{ .Site.BaseURL }}">
+<meta property="og:image" content="{{ .Site.BaseURL }}{{ .Site.Params.facebook.image }}">
+<meta property="og:type" content="{{ .Site.Params.facebook.type }}">
+<meta property="og:title" content="{{ .Site.Title }}">
+<meta property="og:description" content="{{ .Site.Params.description }}">

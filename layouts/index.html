@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html>
+<head>
 
-{{ partial "head.html" . }}
-	
+	<title>{{ .Site.Title }} :: {{ .Site.Params.subtitle }}</title>
+
+	{{ partial "head/icons.html" . }}
+	{{ partial "head/meta.html" . }}
+	{{ partial "head/css.html" . }}
+
+</head>
 <body>
 
 <!-- PayPal donate button -->
