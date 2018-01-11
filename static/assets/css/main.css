@@ -10,6 +10,7 @@ body {
 	margin: 0;
 	font-size: 18px;
 	padding: 0;
+	padding-top: 50px;
 }
 
 footer {
@@ -55,6 +56,10 @@ input[type="submit"]{
 	color: #2118D4;
 }
 
+.container {
+	max-width: 768px;
+}
+
 .mc-field-group label{
 	padding-bottom: 5px;
 }
@@ -93,6 +98,14 @@ input[type="submit"]{
 	padding-top: 15px;
 }
 
+h1 {
+	color: #46b5ff;
+	font-weight: bold;
+	margin: 0;
+	margin-bottom: 20px;
+	padding: 0;
+}
+
 h2 {
 	padding: 8px 15px 8px 15px;
 	background: url(/assets/images/bg-overlay-pattern.png);
@@ -106,9 +119,8 @@ h3 {
 	padding-top: 15px;
 }
 
-.margin {
-	margin: 50px auto;
-	max-width: 700px;
+.brand {
+	margin-bottom: 25px;
 }
 
 .brand .logo {
