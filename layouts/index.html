@@ -30,31 +30,44 @@
 	<p class="lead-text">{{ .Site.Params.description }}</p>
 
 	<div class="primary options row">
-		<a 
-			href="https://www.dropbox.com/s/khuj0wqnjlsjs07/opm20171016d.img.zip?dl=0" 
-			target="_blank" 
-			class="option col-xs-6">
-			
+		<div class="option col-xs-6">
 			<div class="inner">
-				<div class="ico">
-					<i class="fa fa-hdd-o"></i>
-				</div>
-				<h3>Download Disk Image</h3>
-			</div>
-		</a>
+				<a 
+					class="primary" 
+					href="https://www.dropbox.com/s/khuj0wqnjlsjs07/opm20171016d.img.zip?dl=0" 
+					target="_blank"
+					title="Download disk image">
+					<div class="ico">
+						<i class="fa fa-hdd-o"></i>
+					</div>
+					<h3>Download disk image</h3>
+				</a>
+				<a 
+					class="info" 
+					href="/pages/image-instructions"
+					title="Read image installation instructions"><i class="fa fa-info-circle"></i></a>
+			</div><!-- /.inner -->
+		</div><!-- /.option -->
 
-		<a 
-			href="https://github.com/kr15h/ofxPiMapper"
-			target="_blank" 
-			class="option col-xs-6">
+		<div class="option col-xs-6">
 			<div class="inner">
-				<div class="ico">
-					<i class="fa fa-github"></i>
-				</div>
-				<h3>Contribute on GitHub</h3>
-			</div>
-		</a>
-	</div>
+				<a 
+					class="primary"
+					href="https://github.com/kr15h/ofxPiMapper"
+					target="_blank"
+					title="Contribute on GitHub">
+					<div class="ico">
+						<i class="fa fa-github"></i>
+					</div>
+					<h3>Get it on GitHub</h3>
+				</a>
+				<a 
+					class="info"
+					href="/pages/github-instructions"
+					title="Read GitHub repository usage instructions"><i class="fa fa-info-circle"></i></a>
+			</div><!-- /.inner -->			
+		</div><!-- /.option -->
+	</div><!-- /.primary .options -->
 
 	<h2>Support the Development</h2>
 
