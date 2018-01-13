@@ -119,6 +119,12 @@ h3 {
 	padding-top: 15px;
 }
 
+code {
+	background: #46b5ff;
+	border-radius: 0;
+	color: #2428d1;
+}
+
 pre {
 	background: #375be6;
 	border: 1px solid #5c98ee;
