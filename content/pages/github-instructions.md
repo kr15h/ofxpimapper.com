@@ -10,13 +10,13 @@ Connect your Pi to a power source and wait for it to boot up. It will restart on
 
 From here on you should use your keyboard that is connected to the Raspberry Pi.
 
-Download stable version of openFrameworks, which at the time of writing this is version 0.9.8.
+Download stable version of openFrameworks, which at the time of writing this is version 0.10.0.
 
 ```
 cd
-wget http://openframeworks.cc/versions/v0.9.8/of_v0.9.8_linuxarmv6l_release.tar.gz
+wget http://openframeworks.cc/versions/v0.10.0/of_v0.10.0_linuxarmv6l_release.tar.gz
 mkdir openFrameworks
-tar vxfz of_v0.9.8_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1
+tar vxfz of_v0.10.0_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1
 ```
 
 Next, you have to install dependencies. Use the commands below. At some points of the installation the system will ask you whether you are sure that you want to install something. Hit `y` and `Enter` to proceed.
@@ -26,7 +26,19 @@ cd /home/pi/openFrameworks/scripts/linux/debian
 sudo ./install_dependencies.sh
 ```
 
-Now you have all the components ready to be able to compile openFrameworks. Do that by using the following command.
+Now you have all the components ready to be able to compile openFrameworks, but you need to make sure you have enough RAM allocated to do this. To configure this, do the following:
+
+```
+sudo raspi-config
+```
+
+Select `7 Advanced Options`
+
+Select `A3 Memory Split`
+
+Type `64` and choose `<ok>`
+
+You're now ready to compile openFrameworks. Do that by using the following command.
 
 ```
 make Release -C /home/pi/openFrameworks/libs/openFrameworksCompiled/project
@@ -56,16 +68,29 @@ git checkout 0.9.0-compatible
 Go to the ofxPiMapper example folder and compile it.
 
 ```
-cd /home/pi/openFrameworks/addons/ofxPiMapper/example
+cd /home/pi/openFrameworks/addons/ofxPiMapper/example_basic
 make
 ```
+
+You might now need to increase the GPU memory partition to run ofxPiMapper. Type the following:
+
+```
+sudo raspi-config
+```
+
+Select `7 Advanced Options`
+
+Select `A3 Memory Split`
+
+Type `128` and choose `<ok>`
 
 When compiling is done, launch the example (use the -f flag to launch it fullscreen) and have fun! 
 
 ```
 cd bin
-./example -f
+./example_basic -f
 ```
 
 Don't forget to check out the shortcuts on the [GitHub repository](https://github.com/kr15h/ofxPiMapper#other-shortcuts). Check out the `example_pocketvj` if you want to make a version with your own shortcuts.
+
 
