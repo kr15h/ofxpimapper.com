@@ -1,5 +1,4 @@
 ---
-title: "ofxPiMapper index"
+title: "ofxPiMapper: Projection Mapping with the Raspberry Pi"
 ---
 
-Placeholder content
