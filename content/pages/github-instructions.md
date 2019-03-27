@@ -58,11 +58,11 @@ git clone https://github.com/kr15h/ofxPiMapper.git
 git clone https://github.com/jvcleave/ofxOMXPlayer.git
 ```
 
-Checkout the stable version of ofxOMXPlayer.
+Install ofxOMXPlayer dependencies.
 
 ```
 cd /home/pi/openFrameworks/addons/ofxOMXPlayer
-git checkout 0.9.0-compatible
+./install_depends.sh
 ```
 
 Go to the ofxPiMapper example folder and compile it.
