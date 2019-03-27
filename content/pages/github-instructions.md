@@ -62,7 +62,7 @@ Install ofxOMXPlayer dependencies.
 
 ```
 cd /home/pi/openFrameworks/addons/ofxOMXPlayer
-./install_depends.sh
+sudo ./install_depends.sh
 ```
 
 Go to the ofxPiMapper example folder and compile it.
