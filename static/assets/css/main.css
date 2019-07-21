@@ -263,6 +263,20 @@ pre {
 	margin-bottom: 10px;
 }
 
+.supporters ul {
+	margin: 0;
+	padding: 0;
+	padding-top: 10px;
+}
+
+.supporters li {
+	list-style: none;
+	display: inline;
+	padding-right: 1em;
+	padding-left: 1em;
+	border-left: 2px solid #467eff;
+}
+
 @media (max-width: 768px) {
 	.margin {
 		margin: 40px auto;

@@ -118,6 +118,30 @@
 
 	</div>
 
+	<h3>Supporters</h3>
+
+	<div class="supporters">
+		<ul>
+		
+		{{ range .Params.Supporters }}
+    	    <li>
+    	    
+    	    {{ if isset . "link" }}
+    	        <a href="{{ .link }}" alt="{{ .name }}">
+    	    {{ end }}
+	
+    	    {{ .name }}
+	
+    	    {{ if isset . "link" }}
+    	        </a>
+    	    {{ end }}
+			
+			</li>
+    	{{ end }}
+    	
+    	</ul>
+	</div>
+
 	<h3>With Pi Mapper you can:</h3>
 
 	<ul>
