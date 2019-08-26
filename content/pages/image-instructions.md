@@ -10,6 +10,7 @@ Choose your topic.
 - [Using Own Sources](#using-own-sources)
 - [Encoding Sources](#encoding-sources)
 - [Deleting Sources](#deleting-sources)
+- [Enabling and Disabling the Camera](#enabling-and-disabling-the-camera)
 
 ## Preparing the SD Card
 
@@ -69,4 +70,14 @@ ffmpeg -i input-video.mp4 -s 1280x720 -aspect 16:9 \
 
 You can delete all, except default, sources by placing an empty file with the name **PIMAPPER_DELETE_SOURCES** in the root level of your USB memory stick. After deletion Pi Mapper will attempt to copy any of the video and image sources that can be found on the USB stick, so make sure that you remove the files you want to delete from the memory stick first.
 
+## Enabling and Disabling the Camera
 
+**Available from v1.2.0**
+
+Raspberry Pi camera is now supported on the Pi Mapper image build. Make sure your camera is connected, but **do not use the official way to enable it** as the original script will allocate the wrong amount of memory to the GPU. 
+
+**To enable the camera**, create a file with the name **PIMAPPER_ENABLE_CAMERA** on the root level of an USB flash drive. Insert the USB drive into one of the free ports of your Raspberry Pi, hit ESC to quit Pi Mapper (wait 30 seconds for it to start up again) or reboot your Pi. The camera should be visible as the **Camera Source** under the FBO Sources list.
+
+**To disable the camera**, create a file with the name **PIMAPPER_DISABLE_CAMERA** on the root level of an USB drive. Restart Pi Mapper by hitting ESC or reboot your Pi. The Camera Source should not be visible in the sources list anymore.
+
+In case of successful operation, the files PIMAPPER_ENABLE_CAMERA and PIMAPPER_DISABLE_CAMERA should be removed from your USB drive. If that is not the case, try removing the USB drive and rebooting your Pi without it inserted.
